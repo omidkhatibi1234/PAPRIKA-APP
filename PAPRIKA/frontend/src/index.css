@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #141217;
+  direction: rtl;
+  text-align: right;
+}
+a {
+  color: #fff;
+}
+a.active {
+  color: #cd3726;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 640px) {
+  a.active {
+    background-color: whitesmoke;
+    color: black;
+  }
+}
