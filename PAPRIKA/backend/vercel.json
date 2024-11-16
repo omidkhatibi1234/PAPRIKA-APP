@@ -6,6 +6,9 @@
       "use": "@vercel/node",
       "config": {
         "includeFiles": ["dist/**"]
+      },
+      "env": {
+        "NODE_VERSION": "20.15.1"
       }
     }
   ],
