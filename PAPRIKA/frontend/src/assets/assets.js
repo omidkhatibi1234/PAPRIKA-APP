@@ -13,7 +13,7 @@ import binIcon from "./bin-icon.png";
 import phoneIcon from "./phone-icon.png";
 import instagramIcon from "./instagram-icon.png";
 import localDeliveryIcon from "./local-delivery.png";
-import stripeLogo from "./stripe-logo.png";
+import stripeLogo from "./Stripe-logo.png";
 import contactImg from "./contact.jpg";
 import homeImg from "./home-image.png";
 import organicLogo from "./organic-logo.png";
