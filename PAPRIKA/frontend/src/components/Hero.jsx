@@ -3,7 +3,7 @@ import MyImage from "./MyImage";
 
 const Hero = () => {
   const imageObject = {
-    src: assets.IMG_22,
+    src: assets.homeImg,
     alt: "hero-image",
   };
 
