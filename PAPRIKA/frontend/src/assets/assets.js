@@ -16,6 +16,7 @@ import localDeliveryIcon from "./local-delivery.png";
 import stripeLogo from "./Stripe-logo.png";
 import contactImg from "./contact.jpg";
 import homeImg from "./homeImg.jpg";
+import homeImgOptimisition from "./homeImg-optimisition.jpg";
 import organicLogo from "./organic-logo.png";
 import healthCareLogo from "./healthyCare-logo.png";
 import eatHealthyLogo from "./healthy-logo.png";
@@ -78,6 +79,7 @@ export const assets = {
   green01Img,
   green02Img,
   homeImg,
+  homeImgOptimisition,
   // IMG_01,
   // IMG_02,
   // IMG_03,
