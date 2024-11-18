@@ -39,19 +39,9 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-5 font-medium ">
       <div className="flex flex-row-reverse items-center gap-6">
-        <img
-          src={assets.SearchIcon}
-          onClick={() => setShowSearch(true)}
-          className="w-5 cursor-pointer text-white"
-          alt=""
-        />
+        <i class="fa-solid fa-magnifying-glass text-white"></i>
         <div className="group relative">
-          <img
-            onClick={() => (token ? null : navigate("/login"))}
-            src={assets.ProfileIcon}
-            className="w-5 cursor-pointer"
-            alt=""
-          />
+          <i class="fa-solid fa-user text-white"></i>
 
           {/* Dropdown Menu */}
           {token && (
@@ -75,17 +65,21 @@ const Navbar = () => {
           )}
         </div>
         <Link to="/cart" className="relative">
-          <img src={assets.CartIcon} className="w-5 min-w-5" alt="" />
-          <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-baseColorRed text-white aspect-square rounded-full text-[8px]">
+          <i class="fa-solid fa-cart-shopping text-white"></i>
+          <p className="absolute right-[-10px] bottom-[-10px] w-4 text-center leading-4 bg-baseColorRed text-white aspect-square rounded-full text-[8px]">
             {getCartCount()}
           </p>
         </Link>
-        <img
+        {/* <img
           onClick={() => setVisible(true)}
           src={assets.MenuIcon}
           className="w-5 sm:hidden cursor-pointer"
           alt=""
-        />
+        /> */}
+        <i
+          onClick={() => setVisible(true)}
+          class="fa-solid fa-bars text-white text-xl sm:hidden cursor-pointer"
+        ></i>
       </div>
       {/* Sidebar menu for small screens */}
       <div
@@ -99,7 +93,7 @@ const Navbar = () => {
             className="flex justify-end items-center gap=4 p-3 cursor-pointer bg-gray-900"
           >
             <p className="text-white ml-2">بازگشت</p>
-            <img className="h-4 rotate-180" src={assets.DropdownIcon} alt="" />
+            <i class="fa-solid fa-arrow-left"></i>
           </div>
           <NavLink
             to="/"
@@ -147,8 +141,13 @@ const Navbar = () => {
         </NavLink>
       </ul>
       <Link to="/" className="flex justify-between items-center">
-        <img src={assets.LogoShape} className="w-10" alt="" />
-        <img src={assets.LogoText} className="w-28" alt="" />
+        {/* <img src={assets.LogoShape} className="w-10" alt="" />
+        <img src={assets.LogoText} className="w-28" alt="" /> */}
+        <img
+          src={assets.navbarLogo}
+          alt="navbar logo image"
+          className="sm:w-36 w-32"
+        />
       </Link>
     </div>
   );

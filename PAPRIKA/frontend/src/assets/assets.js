@@ -1,31 +1,13 @@
-import Logo from "./logo.png";
-import LogoShape from "./logo-shape.png";
-import LogoText from "./logo-text.png";
-import SearchIcon from "./search-icon.png";
-import ProfileIcon from "./profile-icon.png";
-import CartIcon from "./cart-icon.png";
-import MenuIcon from "./menu-icon.png";
-import DropdownIcon from "./dropdown-icon.png";
+import footerLogo from "./footer-logo.png";
+import navbarLogo from "./navbar-logo.png";
 import crossIcon from "./cross-icon.png";
 import starIcon from "./star-icon.png";
 import emptyStarIcon from "./emptyStar-icon.png";
 import binIcon from "./bin-icon.png";
-import phoneIcon from "./phone-icon.png";
-import instagramIcon from "./instagram-icon.png";
-import localDeliveryIcon from "./local-delivery.png";
 import stripeLogo from "./Stripe-logo.png";
 import contactImg from "./contact.jpg";
-import homeImg from "./homeImg.jpg";
-import homeImgOptimisition from "./homeImg-optimisition.jpg";
-import organicLogo from "./organic-logo.png";
-import healthCareLogo from "./healthyCare-logo.png";
-import eatHealthyLogo from "./healthy-logo.png";
-import waranthyLogo from "./waranthy-logo.png";
-import packingLogo from "./packing-logo.png";
-import telegramIcon from "./telegram-icon.png";
+import homeImg from "./homeImg.webp";
 import locationIcon from "./location-icon.png";
-import green01Img from "./green01-img.jpg";
-import green02Img from "./green02-img.jpg";
 
 // import IMG_01 from "./IMG_01.jpg";
 // import IMG_02 from "./IMG_02.jpg";
@@ -52,34 +34,16 @@ import green02Img from "./green02-img.jpg";
 // import IMG_23 from "./IMG_23.jpg";
 
 export const assets = {
-  Logo,
-  SearchIcon,
-  ProfileIcon,
-  CartIcon,
-  MenuIcon,
-  DropdownIcon,
+  footerLogo,
+  navbarLogo,
   crossIcon,
   starIcon,
   emptyStarIcon,
   binIcon,
-  instagramIcon,
   stripeLogo,
   contactImg,
-  LogoShape,
-  LogoText,
-  organicLogo,
-  healthCareLogo,
-  eatHealthyLogo,
-  phoneIcon,
-  localDeliveryIcon,
-  waranthyLogo,
-  packingLogo,
-  telegramIcon,
   locationIcon,
-  green01Img,
-  green02Img,
   homeImg,
-  homeImgOptimisition,
   // IMG_01,
   // IMG_02,
   // IMG_03,
