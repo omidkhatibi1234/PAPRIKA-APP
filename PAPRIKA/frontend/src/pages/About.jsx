@@ -1,27 +1,19 @@
 import { assets } from "../assets/assets";
 import Title from "../components/Title";
 import NewsletterBox from "../components/NewsletterBox";
-import MyImage from "../components/MyImage";
 
 const About = () => {
-  const imageObject = {
-    src: assets.IMG_04,
-    alt: "",
-  };
-
   return (
     <div>
       <div className="text-2xl text-center pt-8 border-t">
         <Title text1={"درباره "} text2={"ما"} />
       </div>
       <div className="my-6 flex flex-col md:flex-row gap-16 relative">
-        {/* <img className="w-full md:max-w-[450px]" src={assets.IMG_04} alt="" /> */}
-        <div className="w-full md:max-w-[400px] rounded-xl overflow-hidden">
-          <MyImage image={imageObject} />
-        </div>
-        <div className="absolute top-[-40px] md:top-[-100px] left-2 md:16 ">
-          <img src={assets.green02Img} className="w-16 md:w-24 xl-32" alt="" />
-        </div>
+        <img
+          src={assets.IMG_04}
+          alt=""
+          className="w-full md:max-w-[400px] rounded-xl overflow-hidden"
+        />
 
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-200">
           <p>

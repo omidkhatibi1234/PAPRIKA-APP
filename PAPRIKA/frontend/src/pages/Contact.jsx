@@ -1,27 +1,19 @@
 import { assets } from "../assets/assets";
-import MyImage from "../components/MyImage";
 import NewsletterBox from "../components/NewsletterBox";
 import Title from "../components/Title";
 
 const Contact = () => {
-  const imageObject = {
-    src: assets.contactImg,
-    alt: "",
-  };
   return (
     <div>
       <div className="text-center text-2xl pt-10 border-t">
         <Title text1={"ارتباط"} text2={"با ما"} />
       </div>
       <div className="my-10 flex flex-col justify-center md:flex-row gap-10 mb-28">
-        {/* <img
-          className="w-full md:max-w-[480px]"
+        <img
           src={assets.contactImg}
-          alt=""
-        /> */}
-        <div className="md:max-w-[480px] rounded-xl overflow-hidden min-w-fit">
-          <MyImage image={imageObject} />
-        </div>
+          alt="contact image"
+          className="md:max-w-[480px] rounded-xl overflow-hidden min-w-fit"
+        />
         <div className="flex flex-col justify-center items-start gap-6">
           <p className="text xl text-white">فروشگاه ما</p>
           <p className="text-gray-200 flex justify-between">
