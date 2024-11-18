@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import MyImage from "./MyImage";
 
-const ProductItem = ({ id, image, name, price }) => {
+const ProductItem = memo(({ id, image, name, price }) => {
   const { currency } = useContext(ShopContext);
 
   const imageObject = {
@@ -27,6 +27,6 @@ const ProductItem = ({ id, image, name, price }) => {
       </div>
     </Link>
   );
-};
+});
 
 export default ProductItem;
