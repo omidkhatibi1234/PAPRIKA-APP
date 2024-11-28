@@ -7,6 +7,7 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const {
     setShowSearch,
+    showSearch,
     getCartCount,
     navigate,
     token,
@@ -36,26 +37,31 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-5 font-medium ">
       <div className="flex flex-row-reverse items-center gap-6">
-        <i class="fa-solid fa-magnifying-glass text-white"></i>
+        <i
+          onClick={() => setShowSearch(!showSearch)}
+          class="fa-solid fa-magnifying-glass text-white cursor-pointer"
+        ></i>
         <div className="group relative">
-          <i onClick={() => logout()} class="fa-solid fa-user text-white"></i>
+          <i
+            onClick={() => logout()}
+            class="fa-solid fa-user text-white cursor-pointer"
+          ></i>
 
           {/* Dropdown Menu */}
           {token && (
             <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
               <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-baseColorRed text-white rounded">
-                <p className="cursor-pointer hover:text-black">My Profile</p>
                 <p
                   onClick={() => navigate("/orders")}
                   className="cursor-pointer hover:text-black"
                 >
-                  Orders
+                  سفارشات
                 </p>
                 <p
                   onClick={() => logout()}
                   className="cursor-pointer hover:text-black"
                 >
-                  Logout
+                  خروج
                 </p>
               </div>
             </div>

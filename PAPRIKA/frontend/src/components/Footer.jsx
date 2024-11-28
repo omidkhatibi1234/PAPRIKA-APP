@@ -2,6 +2,10 @@ import { assets } from "../assets/assets";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+  const backToUp = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div>
       <div className="flex flex-col gap-10 justify-around items-center my-10 mt-40 text-sm sm:flex-row-reverse">
@@ -14,13 +18,22 @@ const Footer = () => {
         <div>
           <p className="text-xl font-medium mb-5 text-white">مجموعـــــــه</p>
           <ul className="flex flex-col gap-1 text-gray-200">
-            <NavLink to="/" className="flex flex-col items-right gap-1">
+            <NavLink
+              onClick={() => {
+                backToUp();
+              }}
+              to="/"
+              className="flex flex-col items-right gap-1"
+            >
               <p>
                 <i class="fa-solid fa-house ml-2"></i>
                 صفحه اصلی
               </p>
             </NavLink>
             <NavLink
+              onClick={() => {
+                backToUp();
+              }}
               to="/collection"
               className="flex flex-col items-right gap-1"
             >
@@ -29,13 +42,25 @@ const Footer = () => {
                 محصولات
               </p>
             </NavLink>
-            <NavLink to="/about" className="flex flex-col items-right gap-1">
+            <NavLink
+              onClick={() => {
+                backToUp();
+              }}
+              to="/about"
+              className="flex flex-col items-right gap-1"
+            >
               <p>
                 <i class="fa-regular fa-face-smile-wink ml-2"></i>
                 درباره ما
               </p>
             </NavLink>
-            <NavLink to="/contact" className="flex flex-col items-right gap-1">
+            <NavLink
+              onClick={() => {
+                backToUp();
+              }}
+              to="/contact"
+              className="flex flex-col items-right gap-1"
+            >
               <p>
                 <i class="fa-regular fa-id-badge ml-2"></i>
                 ارتباط با ما

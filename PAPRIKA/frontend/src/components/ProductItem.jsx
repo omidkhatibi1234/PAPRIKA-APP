@@ -13,13 +13,13 @@ const ProductItem = memo(({ id, image, name, price }) => {
       <img
         src={image[0]}
         alt="product image"
-        className="hover:scale-110 transition ease-in-out"
+        className="hover:scale-110 transition ease-in-out w-full h-[300px]"
       />
       <div className="flex flex-row-reverse justify-between items-center px-5 py-5">
-        <p className="text-sm font-medium text-baseColorRed">
+        <p className="text-sm font-medium text-black">
           {price} {currency}
         </p>
-        <p className="pt-3 pb-1 text-md font-bold text-black">{name}</p>
+        <p className="text-md font-bold text-baseColorRed">{name}</p>
       </div>
     </Link>
   );
