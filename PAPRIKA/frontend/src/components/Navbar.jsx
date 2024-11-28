@@ -141,8 +141,6 @@ const Navbar = () => {
         </NavLink>
       </ul>
       <Link to="/" className="flex justify-between items-center">
-        {/* <img src={assets.LogoShape} className="w-10" alt="" />
-        <img src={assets.LogoText} className="w-28" alt="" /> */}
         <img
           src={assets.navbarLogo}
           alt="navbar logo image"
