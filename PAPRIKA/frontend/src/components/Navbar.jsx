@@ -21,16 +21,13 @@ const Navbar = () => {
     setCartItems({});
   };
 
-  // ------عملیات زیر برای حذف همبرگر منو به محض اسکرول کاربر می باشد-------
   const handleScroll = () => {
     setVisible(false);
   };
 
   useEffect(() => {
-    // اضافه کردن لیسنر اسکرول
     window.addEventListener("scroll", handleScroll);
 
-    // پاک کردن لیسنر هنگام خلاصه شدن کامپوننت
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -41,7 +38,7 @@ const Navbar = () => {
       <div className="flex flex-row-reverse items-center gap-6">
         <i class="fa-solid fa-magnifying-glass text-white"></i>
         <div className="group relative">
-          <i class="fa-solid fa-user text-white"></i>
+          <i onClick={() => logout()} class="fa-solid fa-user text-white"></i>
 
           {/* Dropdown Menu */}
           {token && (
@@ -70,12 +67,7 @@ const Navbar = () => {
             {getCartCount()}
           </p>
         </Link>
-        {/* <img
-          onClick={() => setVisible(true)}
-          src={assets.MenuIcon}
-          className="w-5 sm:hidden cursor-pointer"
-          alt=""
-        /> */}
+
         <i
           onClick={() => setVisible(true)}
           class="fa-solid fa-bars text-white text-xl sm:hidden cursor-pointer"
