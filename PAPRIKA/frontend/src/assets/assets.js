@@ -6,10 +6,10 @@ import emptyStarIcon from "./emptyStar-icon.png";
 import binIcon from "./bin-icon.png";
 import stripeLogo from "./Stripe-logo.png";
 import contactImg from "./contact.jpg";
-import homeImg from "./homeImg.webp";
 import locationIcon from "./location-icon.png";
 
-import IMG_04 from "./IMG_04.jpg";
+import IMG_04 from "./IMG_04.webp";
+import IMG_12 from "./IMG_12.webp";
 
 export const assets = {
   footerLogo,
@@ -21,6 +21,6 @@ export const assets = {
   stripeLogo,
   contactImg,
   locationIcon,
-  homeImg,
+  IMG_12,
   IMG_04,
 };
