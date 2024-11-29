@@ -172,7 +172,7 @@ const Collection = () => {
           {/* Product Sort */}
           <select
             onChange={(e) => setSortType(e.target.value)}
-            className="border-2 border-baseColorRed rounded-md text-300 text-sm px-2"
+            className="border-2 border-baseColorRed rounded-md text-[10px] md:text-sm px-2 "
           >
             <option value="relavent">مرتب سازی براساس : مرتبط</option>
             <option value="low-high">
