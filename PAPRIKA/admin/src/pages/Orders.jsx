@@ -125,11 +125,11 @@ const Orders = ({ token }) => {
               value={order.status}
               className="p-2 font-semibold"
             >
-              <option value="Order Placed">سفارش آماده است</option>
-              <option value="Packing">درحال بسته بندی</option>
-              <option value="Shipped">ارسال شد</option>
-              <option value="Out for delivery">درمسیر تحویل</option>
-              <option value="Delivered">تحویل داده شد</option>
+              <option value="سفارش آماده است">سفارش آماده است</option>
+              <option value="درحال بسته بندی">درحال بسته بندی</option>
+              <option value="ارسال شد">ارسال شد</option>
+              <option value="در مسیر تحویل">درمسیر تحویل</option>
+              <option value="تحویل داده شد">تحویل داده شد</option>
             </select>
           </div>
         ))}
