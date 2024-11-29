@@ -14,21 +14,21 @@ const CartTotal = () => {
         <div className="flex flex-row justify-between ">
           <p>هزینه محصول</p>
           <p>
-            {getCartAmount()}.00 {currency}
+            {getCartAmount()} {currency}
           </p>
         </div>
-        <hr />
+        {/* <hr />
         <div className="flex flex-row justify-between ">
           <p>هزینه ارسال</p>
           <p>
             {getCartAmount()}.00 {currency}
           </p>
-        </div>
+        </div> */}
         <hr />
         <div className="flex justify-between">
           <b>مجموع کل</b>
           <b>
-            {getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee}.00{" "}
+            {getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee}{" "}
             {currency}
           </b>
         </div>

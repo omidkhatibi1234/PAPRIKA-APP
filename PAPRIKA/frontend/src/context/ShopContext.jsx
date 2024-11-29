@@ -8,7 +8,7 @@ export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
   const currency = "تومان";
-  const delivery_fee = 10;
+  const delivery_fee = 0;
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
@@ -87,16 +87,37 @@ const ShopContextProvider = (props) => {
     }
   };
 
+  // const getCartAmount = () => {
+  //   let totalAmount = 0;
+  //   for (const items in cartItems) {
+  //     let itemInfo = products.find((product) => product._id === items);
+  //     for (const item in cartItems[items]) {
+  //       for (const weight in cartItems[items]) {
+  //         try {
+  //           if (cartItems[items][item] > 0) {
+  //             totalAmount +=
+  //               itemInfo.price * (weight / 1000) * cartItems[items][item];
+  //           }
+  //         } catch (error) {}
+  //       }
+  //     }
+  //   }
+  //   return totalAmount;
+  // };
   const getCartAmount = () => {
     let totalAmount = 0;
-    for (const items in cartItems) {
-      let itemInfo = products.find((product) => product._id === items);
-      for (const item in cartItems[items]) {
-        try {
-          if (cartItems[items][item] > 0) {
-            totalAmount += itemInfo.price * cartItems[items][item];
+    for (const itemId in cartItems) {
+      let itemInfo = products.find((product) => product._id === itemId);
+      if (itemInfo) {
+        // فقط در صورتی که شیء محصول وجود دارد
+        for (const weight in cartItems[itemId]) {
+          const quantity = cartItems[itemId][weight]; // تعداد محصولات
+          const weightInKg = parseFloat(weight) / 1000; // تبدیل وزن به کیلوگرم
+          if (quantity > 0 && weightInKg > 0) {
+            // اطمینان از دریافتی درست
+            totalAmount += itemInfo.price * weightInKg * quantity; // محاسبه قیمت کل
           }
-        } catch (error) {}
+        }
       }
     }
     return totalAmount;
