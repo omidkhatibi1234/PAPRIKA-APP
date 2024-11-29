@@ -4,6 +4,7 @@ import axios from "axios";
 import { backendUrl, currency } from "../App";
 import { toast } from "react-toastify";
 import { assets } from "../assets/assets";
+import moment from "moment-jalaali";
 
 const Orders = ({ token }) => {
   const [orders, setOrders] = useState([]);
@@ -71,26 +72,25 @@ const Orders = ({ token }) => {
                   if (index === order.items.length - 1) {
                     return (
                       <p className="py-0.5" key={index}>
-                        {item.name} x {item.quantity} <span> {item.size} </span>
+                        {item.name} x {item.quantity} عدد
+                        <span> {item.size} گرمی</span>
                       </p>
                     );
                   } else {
                     return (
                       <p className="py-0.5" key={index}>
-                        {item.name} x {item.quantity} <span> {item.size} </span>{" "}
-                        ,
+                        {item.name} x {item.quantity} عدد
+                        <span> {item.size} گرمی</span> ,
                       </p>
                     );
                   }
                 })}
               </div>
-              {/* </div> */}
-              <p className="mt-3 mb-2 font-medium">
+              <p className="mt-3 mb-4 font-medium">
                 {order.address.firstName + " " + order.address.lastName}
               </p>
               <div>
-                <p>{order.address.homeAddress + ", "}</p>
-                <p>
+                <p className="mb-2">
                   {order.address.city +
                     " , خیابان " +
                     order.address.homeAddress +
@@ -101,12 +101,21 @@ const Orders = ({ token }) => {
               <p>شماره تماس : {order.address.phone}</p>
             </div>
             <div>
+              <hr className="md:hidden border-red-900 my-1" />
               <p className="text-sm sm:text-[15px]">
                 تعداد محصول : {order.items.length}
               </p>
               <p className="mt-3">شیوه پرداخت : {order.paymentMethod}</p>
-              <p>وضعیت پرداختی : {order.payment ? "Done" : "Pending"}</p>
-              <p>تاریخ : {new Date(order.date).toLocaleDateString()}</p>
+              <p className="my-1">
+                وضعیت پرداختی : {order.payment ? "پرداخت شد" : "در حال پرداخت"}
+              </p>
+              {/* <p>تاریخ : {new Date(order.date).toLocaleDateString()}</p> */}
+              <p>
+                تاریخ :{" "}
+                {moment(new Date(order.date).toLocaleDateString()).format(
+                  "jYYYY/jM/jD"
+                )}
+              </p>
             </div>
             <p className="text-sm sm:text-[15px]">
               {order.amount} {currency}
@@ -116,11 +125,11 @@ const Orders = ({ token }) => {
               value={order.status}
               className="p-2 font-semibold"
             >
-              <option value="Order Placed">Order Placed</option>
-              <option value="Packing">Packing</option>
-              <option value="Shipped">Shipped</option>
-              <option value="Out for delivery">Out for delivery</option>
-              <option value="Delivered">Delivered</option>
+              <option value="Order Placed">سفارش آماده است</option>
+              <option value="Packing">درحال بسته بندی</option>
+              <option value="Shipped">ارسال شد</option>
+              <option value="Out for delivery">درمسیر تحویل</option>
+              <option value="Delivered">تحویل داده شد</option>
             </select>
           </div>
         ))}
