@@ -50,7 +50,7 @@ const addProduct = async (req, res) => {
     const product = new productModel(productData);
     await product.save();
 
-    res.json({ success: true, message: "Product Added" });
+    res.json({ success: true, message: "محصول اضافه شد" });
   } catch (error) {
     console.log(error);
     res.json({ success: false, message: error.message });
@@ -72,7 +72,7 @@ const listProducts = async (req, res) => {
 const removingProduct = async (req, res) => {
   try {
     await productModel.findByIdAndDelete(req.body.id);
-    res.json({ success: true, message: "Product Removed " });
+    res.json({ success: true, message: "محصول حذف شد " });
   } catch (error) {
     console.log(error);
     res.json({ success: false, message: error.message });
