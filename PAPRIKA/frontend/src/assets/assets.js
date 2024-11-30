@@ -8,7 +8,7 @@ import stripeLogo from "./Stripe-logo.png";
 import contactImg from "./contact.jpg";
 import locationIcon from "./location-icon.png";
 
-import IMG_04 from "./IMG_04.webp";
+import aboutIMG from "./about-img.webp";
 import IMG_12 from "./IMG_12.webp";
 
 export const assets = {
@@ -22,5 +22,5 @@ export const assets = {
   contactImg,
   locationIcon,
   IMG_12,
-  IMG_04,
+  aboutIMG,
 };
